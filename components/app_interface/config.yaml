@@ -1,0 +1,7 @@
+credentials:
+  admin:
+    password: admin
+    provider:
+      api_key: null
+      llm: null
+  current_user: null

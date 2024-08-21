@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: streamlit_web_app
+    command: sh -c "streamlit run app.py"
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
