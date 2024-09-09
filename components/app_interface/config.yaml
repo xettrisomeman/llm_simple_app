@@ -4,4 +4,4 @@ credentials:
     provider:
       api_key: null
       llm: null
-  current_user: null
+  current_user: admin
