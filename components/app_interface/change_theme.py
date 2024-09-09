@@ -1,6 +1,8 @@
 import streamlit as st
 import toml
 import json
+from components.app_interface.configmanager import HOSTING
+
 
 CONFIG_TOML = ".streamlit/config.toml"
 with open(CONFIG_TOML, 'r') as f:
@@ -64,7 +66,7 @@ FONT = st.selectbox(
 )
 
 
-save_btn = st.button("Save")
+save_btn = st.button("Save", disabled=True if HOSTING else False)
 if save_btn:
     config['theme']['primaryColor'] = map_to_code(PRIMARY_COLOR)
     config['theme']['backgroundColor'] = map_to_code(BACKGROUND_COLOR)

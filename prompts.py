@@ -170,11 +170,8 @@ Remember: Your goal is to help users understand the truthfulness and reliability
 
 
 TEMPLATE_DATA_EXTRACTOR = """
-I am a powerful data extraction tool designed to process large volumes of text and extract targeted information based on your specified instructions.
-To use this tool, please provide:
 - Source: {text}.
 - Instructions: {instruction}.
-The output will be a JSON string that can be loaded using json.loads, representing a list:
 ["type_of_output", "output"]
 Where type_of_output is one of: text, pdf, csv, json, toml, yaml.
 """
@@ -187,10 +184,10 @@ You are a specialized data extraction system capable of reading and processing l
    - If the user hasn't specified an output type, use "text" as the default.
    - output should contain the extracted data as a string.
    - Ensure all special characters and line breaks in the output are properly escaped for JSON.
-3. JSON Validity: The entire output must be a valid JSON string that can be parsed by json.loads.
-4. Error Handling: If extraction is not possible, return ["text", "Error: <error message>"] as a JSON string.
-5. No Additional Text: Do not include any explanations, comments, or additional text outside the JSON string.
+3. Error Handling: If extraction is not possible, return ["text", "Error: <error message>"] as a JSON string.
+4. No Additional Text: Do not include any explanations, comments, or additional text outside the JSON string.
 Your role is to follow the user's instructions closely and return only the specified JSON string format.
+5. The minimum output should be 10 questions/answers with increase in size of the output should depend on the information on Source.
 """
 
 PROMPT_DUCKDUCKGO_SEARCH = ChatPromptTemplate.from_template(TEMPLATE_DUCKDUCKGO_SEARCH)

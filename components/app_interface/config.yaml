@@ -2,6 +2,6 @@ credentials:
   admin:
     password: admin
     provider:
-      api_key: null
-      llm: null
+      api_key: sasa
+      llm: Cohere
   current_user: admin

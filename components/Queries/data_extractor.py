@@ -67,6 +67,7 @@ if button:
                     "instruction": instruction
                 }
             )
+            st.write(output)
             file_type, data = output[0], output[1]
             if file_type == "text":
                 st.write(data)

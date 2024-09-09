@@ -11,6 +11,7 @@ import json
 from llms import get_model
 
 
+
 model = get_model()
 fact_to_check = st.text_input("Fact To Check", "Is yann lecun neurologist?")
 model_type = model().check_and_get_models_type()

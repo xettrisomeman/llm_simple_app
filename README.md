@@ -12,4 +12,8 @@ Simple LLM APP using cohere, openai and claude.
 > docker compose up
 
 
+## Things to do before running locally:
+    Go to /components/app_interface/configmanager.py
+    set HOSTING=False
+
 **Go to``localhost:8501`` to check the app.**

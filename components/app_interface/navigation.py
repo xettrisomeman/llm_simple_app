@@ -49,6 +49,7 @@ class AccountView:
             if login.username in self.config['credentials']:
                 if login.password == self.config['credentials'][login.username]['password']:
                     self.username = login.username
+                    st.session_state.username = self.username
                     self.config['credentials']['current_user'] = login.username
                     with open(YAML_FILE, "w") as file:
                         yaml.dump(self.config, file, default_flow_style=False)
